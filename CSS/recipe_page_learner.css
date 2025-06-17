@@ -1,0 +1,108 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    
+}
+
+header {
+    background-color: #191970;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* Recipe Grid Container */
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 0 30px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 12px;
+}
+
+
+
+.description {
+    color: #191919;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Action Buttons */
+.join-btn, .view-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.join-btn {
+    background-color: #191970;
+    color: white;
+}
+
+.join-btn:hover {
+    background-color: #cc462e;
+}
+
+
+
+.view-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px 20px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
