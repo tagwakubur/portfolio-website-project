@@ -1,0 +1,125 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* Class Container */
+.classes-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Recipe-style Class Cards */
+.class-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.class-card.recipe-style {
+    border-left: 4px solid #191970;
+}
+
+.class-card h2 {
+    color: #191970;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Class Details */
+.class-details {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.detail-label {
+    font-weight: bold;
+    width: 80px;
+    color: #7f8c8d;
+}
+
+.detail-value {
+    color: #555;
+    flex: 1;
+}
+
+.edit-btn, .console-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+.edit-btn {
+    background-color: #191970;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.console-btn {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.console-btn:hover {
+    background-color: #1a252f;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .class-card {
+        padding: 20px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+    }
+    
+    .detail-label {
+        width: 100%;
+        margin-bottom: 3px;
+    }
+}
