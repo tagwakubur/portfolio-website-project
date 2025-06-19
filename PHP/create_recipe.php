@@ -1,13 +1,17 @@
 <?php
 session_start();
-include '../includes/connect.php';
+include 'connect.php';
 
-// Assume chef is logged in
-$chef_id = $_SESSION['user_id']; // make sure auth sets this
+// ✅ Access control
+if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'chef') {
+    die("Access denied.");
+}
+
+$chef_id = $_SESSION['user_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
-    $desc = $_POST['description'];
+    $description = $_POST['description'];
     $ingredients = $_POST['ingredients'];
     $instructions = $_POST['instructions'];
     $image_url = $_POST['image_url'];
@@ -15,12 +19,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO recipes (chef_id, title, description, ingredients, instructions, image_url)
             VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("isssss", $chef_id, $title, $desc, $ingredients, $instructions, $image_url);
+    $stmt->bind_param("isssss", $chef_id, $title, $description, $ingredients, $instructions, $image_url);
 
     if ($stmt->execute()) {
-        echo "Recipe added successfully!";
+        header("Location: chef_recipes.php");
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Recipe</title>
+    <link rel="stylesheet" href="recipes_page_chef.css"> <!-- You can create or reuse this -->
+</head>
+<body>
+    <h1>Add New Recipe</h1>
+
+    <form action="create_recipe.php" method="POST" class="recipe-form">
+        <label for="title">Recipe Title:</label><br>
+        <input type="text" name="title" id="title" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="description" rows="3" required></textarea><br><br>
+
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea name="ingredients" id="ingredients" rows="5" required></textarea><br><br>
+
+        <label for="instructions">Instructions:</label><br>
+        <textarea name="instructions" id="instructions" rows="5" required></textarea><br><br>
+
+        <label for="image_url">Image URL (optional):</label><br>
+        <input type="text" name="image_url" id="image_url"><br><br>
+
+        <button type="submit">Submit Recipe</button>
+        <a href="chef_recipes.php"><button type="button">Cancel</button></a>
+    </form>
+</body>
+</html>
