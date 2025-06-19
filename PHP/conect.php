@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "cooking_platform";
+$database = "icook_db";
 
 $conn = new mysqli($host, $user, $password, $database);
 
