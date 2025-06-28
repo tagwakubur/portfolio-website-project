@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chef Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="logo">Chef Portal</div>
+    <ul class="nav-menu">
+        <li><a href="chef-dashboard.html"><i class="icon">📊</i> Dashboard</a></li>
+        <li><a href="class_chef.html"><i class="icon">📝</i> Classes</a></li>
+        <li class="active"><a href="profile_chef_form.html"><i class="icon">👨‍🍳</i> Profile</a></li>
+    </ul>
+</nav>
+
+<div class="form-container">
+    <h1>Chef Profile</h1>
+
+    <form method="POST" action="profile_chef_form.php">
+
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country">
+        </div>
+
+        <div class="form-group">
+            <label for="culinary_school">Culinary School:</label>
+            <input type="text" id="culinary_school" name="culinary_school">
+        </div>
+
+        <div class="form-group">
+            <label for="facebook_link">Facebook:</label>
+            <input type="url" id="facebook_link" name="facebook_link">
+        </div>
+
+        <div class="form-group">
+            <label for="instagram_link">Instagram:</label>
+            <input type="url" id="instagram_link" name="instagram_link">
+        </div>
+
+        <div class="form-group">
+            <label for="linkedin_link">LinkedIn:</label>
+            <input type="url" id="linkedin_link" name="linkedin_link">
+        </div>
+
+        <input type="submit" value="Save Profile">
+    </form>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('success')) {
+        alert("✅ Your profile was saved successfully!");
+    }
+</script>
+
+</body>
+</html>

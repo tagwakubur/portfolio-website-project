@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learner Profile</title>
+    <link rel="stylesheet" href="learner_profile.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav>
+        <a href="learner_dashboard.php">Dashboard</a> |
+        <a href="learner_classes.php">My Classes</a> |
+        <a href="logout.php">Logout</a>
+    </nav>
+
+    <div class="form-container">
+        <h1>Learner Profile</h1>
+
+        <form method="POST" action="profile_learner_form.php">
+<!-- Learner Full Name -->
+<div class="form-group">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+</div>
+
+<!-- Learner Email -->
+<div class="form-group">
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+</div>
+
+<!-- Learner Phone Number -->
+<div class="form-group">
+    <label for="phone">Your Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+</div>
+
+
+            <!-- Bio -->
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </div>
+
+            <!-- Preferred Cuisine -->
+            <div class="form-group">
+                <label for="preferred_cuisine">Preferred Cuisine:</label>
+                <input type="text" id="preferred_cuisine" name="preferred_cuisine">
+            </div>
+
+            <!-- Skill Level -->
+            <div class="form-group">
+                <label for="skill_level">Skill Level:</label>
+                <select id="skill_level" name="skill_level">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Save Changes Button -->
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            alert("✅ Your profile was saved successfully!");
+        }
+    </script>
+
+</body>
+</html>

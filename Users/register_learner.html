@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Learner</title>
+    <link rel="stylesheet" href="register_learner.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>WELCOME LEARNER!!</h1>
+        
+        <form method="POST" action="register_learner_form.php">
+
+            <h2>Name:</h2>
+            <div class="form-group">
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <h2>Email:</h2>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <h2>Contact Number:</h2>
+            <div class="form-group">
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            
+            <h2>Password:</h2>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <h2>Confirm Password:</h2>
+            <div class="form-group">
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

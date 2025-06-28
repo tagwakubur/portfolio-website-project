@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Recipe</title>
+    <link rel="stylesheet" href="add_recipe.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Recipe</h1>
+        <a href="class_chef.html" class="back-btn">← Back to Recipes</a>
+    </header>
+    
+    <main class="add-recipe-main">
+        <form id="recipe-form" class="add-recipe-form">
+            <div class="form-group">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="recipe-author">Author:</label>
+                <input type="text" id="recipe-author" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="recipe-ingredients">Ingredients:</label>
+                <div id="ingredients-container">
+                    <div class="ingredient-input">
+                        <input type="text" class="ingredient" placeholder="Ingredient" required>
+                        <button type="button" class="remove-ingredient">−</button>
+                    </div>
+                </div>
+                <button type="button" id="add-ingredient" class="add-btn">+ Add Another Ingredient</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="recipe-description">Description:</label>
+                <textarea id="recipe-description" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Save Recipe</button>
+                <button type="reset" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </main>
+    
+    <script src="add-recipe.js"></script>
+</body>
+</html>
