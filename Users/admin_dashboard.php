@@ -39,6 +39,8 @@ mysqli_close($conn);
 </head>
 <body>
     <aside class="sidebar">
+          <div class="admin-profile">
+        <img src="UsersImgs/admin.JPG" alt="Admin Photo">
         <h2>Admin Dashboard</h2>
         <ul>
             <li><a href="#">Dashboard</a></li>
@@ -48,7 +50,7 @@ mysqli_close($conn);
 
     <main class="main-content">
         <header>
-            <h1>Welcome, Admin</h1>
+            <h1>Welcome, TAGWA BASHIR ABDULLA </h1>
         </header>
 
         <!-- Summary Cards -->
