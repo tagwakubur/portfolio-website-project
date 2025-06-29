@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Chef</title>
+    <link rel="stylesheet" href="class_chef.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+             <header>
+        
+        <form action="add_recipe.html" method="get">
+    <button type="submit" class="add-recipe-btn">+ Add New Recipe</button>
+</form>
+        
+    </header>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="chef-dashboard.html" class="nav-link">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="class_chef.html" class="nav-link">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Classes</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile_chef.html" class="nav-link">
+                        <span class="nav-icon">👨‍🍳</span>
+                        <span class="nav-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Class Chef</h1>
+            </header>
+
+            <div class="classes-container">
+                <!-- Recipe-style Class Cards -->
+                <div class="class-card recipe-style">
+                    <img src="pic/chicken-curry.jpg"  alt="chicken-curry" class="recipe-image">
+                    <h2>Chicken Curry</h2>
+                    <p class="description">A flavorful chicken curry with aromatic spices and creamy coconut milk.</p>
+                    <div class="button-group">
+                        <button class="edit-btn">Edit</button>
+                           <button class="delete-btn">Delete</button>
+                    </div>
+                    <div class="class-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Date:</span>
+                            <span class="detail-value">6/8/2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Time:</span>
+                            <span class="detail-value">6:00pm - 9:00pm</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Type:</span>
+                            <span class="detail-value">Online (Zoom)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="class-card recipe-style">
+                    
+                    <img src="pic/veg-stir-fry.jpg"  alt="chicken-curry" class="recipe-image">
+                    <h2>Vegetable Stir Fry</h2>
+                    <p class="description">Quick and healthy vegetable stir fry ready in 15 minutes.</p>
+                    <div class="button-group">
+                        <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                    </div>
+                    <div class="class-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Date:</span>
+                            <span class="detail-value">10/8/2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Time:</span>
+                            <span class="detail-value">2:00pm - 5:00pm</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Type:</span>
+                            <span class="detail-value">In-person</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="class-card recipe-style">
+                    
+                    <img src="pic/butter-chicken.jpg"  alt="chicken-curry" class="recipe-image">
+                    <h2>Butter Chicken</h2>
+                    <p class="description">Creamy, tomato-based butter chicken that's perfect with naan bread.</p>
+                    <div class="button-group">
+                        <button class="edit-btn">Edit</button>
+                       <button class="delete-btn">Delete</button>
+                    </div>
+                    <div class="class-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Date:</span>
+                            <span class="detail-value">15/8/2025</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Time:</span>
+                            <span class="detail-value">7:00pm - 9:00pm</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Type:</span>
+                            <span class="detail-value">Hybrid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>
