@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learner Profile</title>
-    <link rel="stylesheet" href="profile_learner.css">
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
@@ -14,7 +14,8 @@
   <ul class="nav-menu">
     <li><a href="learner-dasboard.html"><i class="icon">📊</i> Dashboard</a></li>
     <li><a href="recipe_page_learner.html"><i class="icon">📝</i> Classes</a></li>
-    <li class="active"><a href="learner_profile.html"><i class="icon">👨‍🍳</i> Profile</a></li>
+    <li class="active"><a href="profile_learner.html"><i class="icon">👨‍🍳</i> Profile</a></li>
+     <a href="logout.php">Logout</a>
   </ul>
 </nav>
 
@@ -68,12 +69,19 @@
         </form>
     </div>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('success')) {
-            alert("✅ Your profile was saved successfully!");
-        }
-    </script>
+   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has('success')) {
+        alert("✅ Your profile was saved successfully!");
+        window.location.href = "profile_learner.html";
+    }
+
+    if (urlParams.has('error')) {
+        alert("❌ Update failed. Please make sure to use the mail you register with it  .");
+        window.location.href = "profile_learner.html";
+    }
+</script>
 
 </body>
-</html>
+</html> 

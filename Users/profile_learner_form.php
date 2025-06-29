@@ -22,11 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("ssssss", $name, $phone, $bio, $preferred_cuisine, $skill_level, $email);
 
     if ($stmt->execute() && $stmt->affected_rows > 0) {
-        header("Location: profile_learner.html?success=1");
-        exit();
-    } else {
-        echo "❌ Update failed. Please make sure the email exists in the database.";
-    }
+    header("Location: profile_learner.html?success=1");
+    exit();
+} else {
+    header("Location: profile_learner.html?error=1");
+    exit();
+}
 
     $stmt->close();
 }
