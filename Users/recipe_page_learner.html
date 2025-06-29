@@ -7,50 +7,56 @@
     <link rel="stylesheet" href="recipe_page_learner.css">
 </head>
 <body>
-    <header>
-        <h1>Available Recipes</h1>
-    </header>
-    
-    <main class="recipe-container">
-        <!-- Chicken Curry -->
-        <div class="recipe-card">
-            <h2>Chicken Curry</h2>
+
+<div class="dashboard-container">
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">Learner Portal</div>
+        <ul class="nav-menu">
+            <li><a href="learner-dasboard.html"><i class="icon">📊</i> Dashboard</a></li>
+            <li class="active"><a href="recipe_page_learner.html"><i class="icon">📝</i> Classes</a></li>
+            <li><a href="learner_profile.html"><i class="icon">👨‍🍳</i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Available Recipes</h1>
+        </header>
+
+        <main class="recipe-container">
+            <!-- Chicken Curry -->
+            <div class="recipe-card">
+                 <img src="pic/chicken-curry.jpg"  alt="chicken-curry" class="recipe-image">
+                <h2>Chicken Curry</h2>
+                
+                <p class="description">A flavorful chicken curry with aromatic spices and creamy coconut milk.</p>
+                <button class="join-btn">Join Class</button>
+            </div>
+
+            <!-- Butter Chicken -->
+            <div class="recipe-card">
+                <img src="pic/butter-chicken.jpg"  alt="chicken-curry" class="recipe-image">
+                <h2>Butter Chicken</h2>
+                <p class="description">Creamy, tomato-based butter chicken that's perfect with naan bread.</p>
+                <button class="join-btn">Join Class</button>
+            </div>
+
             
-            <p class="description">A flavorful chicken curry with aromatic spices and creamy coconut milk.</p>
-            <button class="join-btn">Join Class</button>
-        </div>
-        
-        <!-- Butter Chicken -->
-        <div class="recipe-card">
-            <h2>Butter Chicken</h2>
-           
-            <p class="description">Creamy, tomato-based butter chicken that's perfect with naan bread.</p>
-            <button class="join-btn">Join Class</button>
-        </div>
-        
-        <!-- Nasi Ayam -->
-        <div class="recipe-card">
-            <h2>Nasi Ayam</h2>
+
+            <!-- Vegetable Stir Fry -->
+            <div class="recipe-card">
+                <img src="pic/veg-stir-fry.jpg"  alt="chicken-curry" class="recipe-image">
+                <h2>Vegetable Stir Fry</h2>
+                <p class="description">Quick and healthy vegetable stir fry ready in 15 minutes.</p>
+                <button class="join-btn">Join Class</button>
+            </div>
+
             
-            <p class="description">Fragrant Malaysian chicken rice with aromatic herbs.</p>
-            <button class="join-btn">Join Class</button>
-        </div>
-        
-        <!-- Vegetable Stir Fry -->
-        <div class="recipe-card">
-            <h2>Vegetable Stir Fry</h2>
-         
-            <p class="description">Quick and healthy vegetable stir fry ready in 15 minutes.</p>
-           <button class="join-btn">Join Class</button>
-        </div>
-        
-        <!-- Chocolate Cake -->
-        <div class="recipe-card">
-            <h2>Chocolate Cake</h2>
-      
-            <p class="description">Rich and moist chocolate cake for any occasion.</p>
-            <button class="join-btn">Join Class</button>
-        </div>
-    </main>
+        </main>
+    </div>
+</div>
+
 </body>
 </html>
