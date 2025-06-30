@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('icook_db.php');
 
 // Fetch class data
 $class_id = $_GET['class_id'];
