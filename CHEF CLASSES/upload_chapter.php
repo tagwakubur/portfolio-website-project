@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('icook_db.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['chapter_file'])) {
     $class_id = $_POST['class_id'];
