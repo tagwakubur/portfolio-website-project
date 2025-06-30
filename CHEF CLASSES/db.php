@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost'; // Database host
-$dbname = 'chef_dashboard'; // Database name
+$dbname = 'icook_db'; // Database name
 $username = 'root'; // Database username
 $password = ''; // Database password
 
