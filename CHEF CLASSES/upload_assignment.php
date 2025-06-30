@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('icook_db.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $file = $_FILES['file'];
