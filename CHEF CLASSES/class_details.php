@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('icook_db.php');
 
 $class_id = $_GET['class_id'] ?? null;
 if (!$class_id) {
