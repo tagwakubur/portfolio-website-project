@@ -64,8 +64,19 @@ if ($nameResult->num_rows === 1) {
 $nameQuery->close();
 
 // ✅ Send confirmation email with name
-$mail->Body = "Hi Chef {$chefName},<br><br>Your password has been <strong>successfully reset</strong>.<br><br>You may now <a href='http://localhost/Cookzey-auth/login_chef.html'>log in</a> using your new credentials.<br><br>Thanks!";
-
+$mail->Body = "
+    <div style='font-family: Arial, sans-serif; padding: 20px;'>
+        <h2 style='color: #191970;'>Hello {$chefName},</h2>
+        <p>We’re happy to inform you that your password has been <strong>successfully reset</strong>.</p>
+        <p>You can now securely log in to your account </p>
+        
+            
+        <br>
+        <p>If you did not request this change, please contact our support team immediately.</p>
+        <br>
+        <p>Thank you,<br>The iCook Support Team</p>
+    </div>
+";
     
 
             $mail->send();

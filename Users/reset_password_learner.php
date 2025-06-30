@@ -63,7 +63,19 @@ if ($nameResult->num_rows === 1) {
 $nameQuery->close();
 
 // Now send the email using the actual name
-$mail->Body = "Hi Learner  {$learnerName},<br><br>Your password has been <strong>successfully reset</strong>.<br><br>You may now <a href='http://localhost/Cookzey-auth/login_learner.html'>log in</a> using your new credentials.<br><br>Thanks!";
+$mail->Body = "
+    <div style='font-family: Arial, sans-serif; padding: 20px;'>
+        <h2 style='color:#00008B'>'>Hello {$learnerName},</h2>
+        <p>We’re happy to inform you that your password has been <strong>successfully reset</strong>.</p>
+        <p>You can now securely log in to your account </p>
+        
+            
+        <br>
+        <p>If you did not request this change, please contact our support team immediately.</p>
+        <br>
+        <p>Thank you,<br>The iCook Support Team</p>
+    </div>
+";
 
            
             $mail->send();

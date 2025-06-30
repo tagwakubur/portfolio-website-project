@@ -40,7 +40,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->addAddress($email);
             $mail->isHTML(true);
             $mail->Subject = 'iCook Password Reset Code';
-            $mail->Body = "Your verification code is: <strong>$code</strong>";
+    $mail->Body = "
+    <div style='font-family: Arial, sans-serif; padding: 20px; color: #333; text-align: center;'>
+        <img src='https://cdn-icons-png.flaticon.com/512/1046/1046857.png' alt='iCook Logo' width='80' style='margin-bottom: 20px;'>
+        <h2 style='color: #00008B;'>Hello from iCook!</h2>
+        <p>We received a request to reset your password for your iCook account.</p>
+        <p>Please use the verification code below to proceed with resetting your password:</p>
+
+        <div style='font-size: 24px; font-weight: bold; background-color: #191970; color: white; display: inline-block; padding: 15px 30px; border-radius: 8px; margin: 20px 0;'>
+            {$code}
+        </div>
+
+        <p>If you did not request a password reset, please ignore this email. Your account is still secure.</p>
+        <br>
+        <p>Thank you,<br>The iCook Support Team</p>
+    </div>
+";
+
 
             $mail->send();
             header("Location: verify_code_learner.html");
