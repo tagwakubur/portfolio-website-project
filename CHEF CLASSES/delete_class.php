@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('icook_db.php');
 
 if (isset($_GET['class_id'])) {
     $delete = $pdo->prepare("DELETE FROM classes WHERE class_id = :class_id");
