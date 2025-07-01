@@ -66,3 +66,26 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #191970;
 }
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+}
