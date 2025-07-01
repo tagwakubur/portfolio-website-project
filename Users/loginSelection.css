@@ -75,3 +75,17 @@ body {
     color: #100f0f;
     margin: 10px 0;
 }
+@media (max-width: 350px) {
+    .option {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .welcome {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}
