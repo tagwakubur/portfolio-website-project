@@ -239,26 +239,3 @@ body {
     }
 }
 
-@media (max-width: 576px) {
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-    }
-    
-    .main-content {
-        margin-left: 0;
-    }
-    
-    .container {
-        flex-direction: column;
-    }
-    
-    .nav-link {
-        padding: 0.75rem 1rem;
-    }
-    
-    .button-group {
-        flex-direction: column;
-    }
-}
