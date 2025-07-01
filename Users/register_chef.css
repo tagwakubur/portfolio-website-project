@@ -63,3 +63,23 @@ input:focus {
 .submit-btn:hover {
     background-color: #191970;
 }
+/*  Responsive Styles */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .registration-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+}
