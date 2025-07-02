@@ -20,6 +20,35 @@
 
     <!-- Forgot Password Link -->
     <a href="forgot_password_chef.html">Forgot Password?</a>
+
+    <!-- error-message -->
+    <p id="error-message" style="color:red;"></p>
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorMessage = document.getElementById('error-message');
+
+  
+    errorMessage.textContent = '';
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      e.preventDefault();
+      errorMessage.textContent = 'Please enter a valid email address.';
+      return;
+    }
+
+    
+    if (password.length < 6) {
+      e.preventDefault();
+      errorMessage.textContent = 'Password must be at least 6 characters.';
+      return;
+    }
+  });
+</script>
   </form>
 </body>
 </html>
