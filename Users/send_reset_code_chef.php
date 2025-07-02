@@ -38,15 +38,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->setFrom('tagwaabdullkubur1999915@gmail.com', 'iCook');
             $mail->addAddress($email);
             $mail->isHTML(true);
+            $mail->AddEmbeddedImage('UsersImgs/chefimg.jpg', 'chefimg');
+
             $mail->Subject = 'iCook Password Reset Code';
-     $mail->Body = "
-    <div style='font-family: Arial, sans-serif; padding: 20px;'>
-        <img src='cid:chefHat' alt='Chef Hat' width='100' style='display:block; margin: 0 auto 20px;'>
-        <h2 style='color: #00008B; text-align: center;'>Hello from iCook!</h2>
+ $mail->Body = "
+    <div style='font-family: Arial, sans-serif; padding: 20px; text-align: center;'>
+        <img src='cid:chefimg' alt='Chef Image' width='80' style='margin-bottom: 20px;'>
+        <h2 style='color: #00008B;'>Hello from iCook!</h2>
         <p>We received a request to reset your password for your iCook Chef account.</p>
         <p>Please use the verification code below to proceed with resetting your password:</p>
 
-        <div style='font-size: 26px; font-weight: bold; background-color: #191970; color: white; display: inline-block; padding: 15px 30px; border-radius: 8px; margin: 20px 0;'>
+        <div style='font-size: 24px; font-weight: bold; background-color: #191970; color: white; display: inline-block; padding: 15px 30px; border-radius: 8px; margin: 20px 0;'>
             {$code}
         </div>
 
@@ -55,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Thank you,<br>The iCook Support Team</p>
     </div>
 ";
+
+
+
 
 
             $mail->send();
